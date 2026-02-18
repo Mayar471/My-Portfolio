@@ -151,7 +151,7 @@ export default function Contact() {
                 </p>
               </div>
             </a>
-
+          </div>
           
           </div>
 
