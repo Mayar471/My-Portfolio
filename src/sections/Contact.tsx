@@ -151,11 +151,13 @@ export default function Contact() {
                 </p>
               </div>
             </a>
-          </div>
+          </div> {/* إغلاق قسم Contact Details */}
           
+          {/* Buttons Area (Added to match your Ref) */}
+          <div ref={buttonsRef}>
+            {/* يمكنك وضع أزرار التحميل هنا لاحقاً إذا أردت */}
           </div>
-
-    
+        </div> {/* إغلاق الـ Left Column (هذا هو التاغ الذي كان مفقوداً) */}
 
         {/* Right Column - Image Card */}
         <div className="flex justify-center lg:justify-end items-start">
@@ -171,7 +173,7 @@ export default function Contact() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B1320]/60 to-transparent" />
           </div>
         </div>
-      </div>
+      </div> {/* إغلاق الـ Grid الأساسي */}
 
       {/* Footer */}
       <footer className="mt-20 pt-8 border-t border-white/5">
