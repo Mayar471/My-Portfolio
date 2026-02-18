@@ -132,7 +132,7 @@ export default function Contact() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mayar-almalla-249972253/"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-item flex items-center gap-4 group"
