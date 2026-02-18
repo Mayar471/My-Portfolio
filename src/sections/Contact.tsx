@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail, Linkedin, Github, Download, ArrowRight } from 'lucide-react';
-
+import { Mail, Linkedin, ArrowRight } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
