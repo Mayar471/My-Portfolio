@@ -1,36 +1,56 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Briefcase, GraduationCap, Users } from 'lucide-react';
+import { Briefcase, GraduationCap, Users, Heart } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
-    title: 'Web Developer & Team Lead',
-    company: 'FLARETECH',
-    location: 'Dubai, UAE - Remote',
-    period: 'Oct 2024 – May 2025',
+    title: 'Full-Stack Developer & Team Lead',
+    company: 'FlareTech (Start Up)',
+    location: 'UAE (Remote)',
+    period: '2024 – 2025',
     description:
-      'Led full-stack SaaS development and code quality across a remote team.',
+      'Participated in the design and development of a Software as a Service (SaaS) platform. Supervised a development team, providing weekly reviews on software design and WordPress website development. Produced comprehensive technical documentation and UML diagrams.',
     icon: Briefcase,
   },
   {
-    title: 'Technical Trainer & ICPC Coach',
+    title: 'Founder & Coach — Programming Club',
     company: 'University of Kalamoon',
     location: 'Syria',
-    period: 'Oct 2023 – Present',
+    period: '2022 – 2026',
     description:
-      "Founded the university's programming club; qualified 18 teams to ICPC regionals.",
+      "Founded the university's first official competitive programming club, mentored 250+ students across annual intensive training camps covering algorithms, data structures, and competitive programming. Problem setter on Codeforces and Polygon, organized and judged university contests, received 3 university-level certificates for educational leadership.",
     icon: GraduationCap,
   },
   {
-    title: 'Technical Trainer',
-    company: 'Mini Code Leader',
-    location: 'Syria',
-    period: 'Dec 2024 – Present',
-    description: 'Teach Python and problem-solving for beginners.',
+    title: 'Programming Instructor — Python & Logic',
+    company: 'MiniCodeLeader',
+    location: 'Netherlands (Remote)',
+    period: '2025 – 2026',
+    description: 'Designed project-based lessons to develop computational thinking and problem-solving skills. Introduced young learners to programming and AI fundamentals through hands-on activities.',
     icon: Users,
+  },
+  {
+    title: 'AI & Software Engineering Instructor',
+    company: 'Freelance',
+    location: 'Syria',
+    period: '2024 – present',
+    description: 'Delivered specialized training in Python, Artificial Intelligence Basis. Taught Full-Stack Web Development, including HTML, CSS, JavaScript, Express.js, MySQL. Mentored students through practical software engineering and AI projects.',
+    icon: Briefcase,
+  },
+];
+
+const volunteerWork = [
+  {
+    title: 'Technical Trainer & Content Creator (Volunteer)',
+    company: 'Bana Community Team',
+    location: 'Syria',
+    period: '2024 – present',
+    description:
+      'Delivered technical training courses and workshops as part of a community education initiative. Contributed to educational content production, including filming and producing Reels published on the team\'s Instagram page.',
+    icon: Heart,
   },
 ];
 
@@ -38,6 +58,7 @@ export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
+  const volunteerRef = useRef<HTMLDivElement>(null);
   const imageCardRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
 
@@ -66,6 +87,7 @@ export default function Experience() {
       // Timeline items animation
       const timelineItems = timelineRef.current?.querySelectorAll('.timeline-item');
       const connectorLines = timelineRef.current?.querySelectorAll('.connector-line');
+      const volunteerItems = volunteerRef.current?.querySelectorAll('.volunteer-item');
 
       if (timelineItems) {
         gsap.fromTo(
@@ -97,6 +119,24 @@ export default function Experience() {
               trigger: section,
               start: 'top 70%',
               end: 'top 40%',
+              scrub: 0.4,
+            },
+          }
+        );
+      }
+
+      if (volunteerItems) {
+        gsap.fromTo(
+          volunteerItems,
+          { y: 18, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.08,
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 60%',
+              end: 'top 35%',
               scrub: 0.4,
             },
           }
@@ -159,7 +199,7 @@ export default function Experience() {
           </div>
 
           {/* Timeline */}
-          <div ref={timelineRef} className="space-y-8">
+          <div ref={timelineRef} className="space-y-8 mb-12">
             {experiences.map((exp, index) => (
               <div key={index} className="timeline-item relative pl-8">
                 {/* Connector line */}
@@ -188,6 +228,46 @@ export default function Experience() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Volunteer Work Section */}
+          <div ref={volunteerRef} className="mt-12 pt-8 border-t border-white/10">
+            <div className="flex items-center gap-3 mb-6">
+              <Heart className="w-5 h-5 text-gold" />
+              <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-white">
+                Volunteer Work
+              </h3>
+            </div>
+            <div className="space-y-6">
+              {volunteerWork.map((vol, index) => (
+                <div key={index} className="volunteer-item relative pl-8">
+                  {/* Connector line */}
+                  <div className="absolute left-0 top-0 w-px h-full bg-gradient-to-b from-gold/40 to-transparent" />
+
+                  {/* Dot */}
+                  <div className="absolute left-0 top-0 w-2 h-2 -translate-x-[3px] rounded-full bg-gold/60" />
+
+                  {/* Content */}
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <vol.icon className="w-4 h-4 text-gold/80" />
+                      <span className="text-xs uppercase tracking-[0.1em] text-navy-light">
+                        {vol.period}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-semibold text-white mb-1">
+                      {vol.title}
+                    </h3>
+                    <p className="text-sm text-gold/80 mb-2">
+                      {vol.company} • {vol.location}
+                    </p>
+                    <p className="text-navy-light text-sm leading-relaxed">
+                      {vol.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

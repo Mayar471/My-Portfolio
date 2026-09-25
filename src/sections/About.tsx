@@ -127,7 +127,7 @@ export default function About() {
     return () => ctx.revert();
   }, []);
 
-  const quoteText = 'I build systems that understand content.';
+  const quoteText = 'I build AI-powered systems that understand content.';
 
   return (
     <section
@@ -161,14 +161,10 @@ export default function About() {
           {/* Body */}
           <div ref={bodyRef} className="space-y-4 text-navy-light leading-relaxed">
             <p>
-              I'm an IT Engineering graduate specializing in AI and full-stack
-              development. I've shipped AI-driven tools for education—like
-              automated grading and Arabic OCR—and led technical training
-              programs for 200+ students.
+              Software and AI Engineer with hands-on experience building production-ready AI and software systems, including an LLM-powered academic assessment platform, an Arabic OCR engine, a multi-user restaurant management system, and a Gemini-based WhatsApp assistant.
             </p>
             <p>
-              Currently, I'm deepening my work in NLP and Retrieval-Augmented
-              Generation (RAG).
+              Strong background in computer vision, LLM integration, and full-stack development. Competitive programmer with 2,800+ problems solved, ICPC coach, and founder of a university programming club that has trained over 250 students.
             </p>
           </div>
 

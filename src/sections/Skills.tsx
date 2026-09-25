@@ -5,10 +5,7 @@ import {
   Brain,
   Code2,
   Globe,
-  Wrench,
-  Cpu,
   Database,
-  GitBranch,
   Terminal,
 } from 'lucide-react';
 
@@ -16,47 +13,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 const skillCategories = [
   {
+    title: 'Languages',
+    icon: Code2,
+    skills: ['C++ (Expert)', 'Python', 'JavaScript', 'Java', 'C#', 'SQL'],
+  },
+  {
     title: 'AI / ML',
     icon: Brain,
     skills: [
-      'Generative AI (Gemini/OpenAI)',
-      'Computer Vision',
-      'OCR',
-      'CNNs',
-      'Scikit-learn',
-      'NLP & RAG',
+      'TensorFlow',
+      'Keras',
+      'PyTorch',
+      'Scikit-Learn',
+      'OpenCV',
+      'CNN',
+      'RNN',
+      'Image Segmentation',
     ],
   },
   {
-    title: 'Languages',
-    icon: Code2,
-    skills: ['Python', 'C++', 'JavaScript', 'SQL', 'Java'],
+    title: 'LLM & Agents',
+    icon: Brain,
+    skills: ['Prompt Engineering', 'Agentic AI', 'LLM Integration'],
   },
   {
-    title: 'Web',
+    title: 'Backend',
     icon: Globe,
     skills: [
       'FastAPI',
-      'React',
-      'Node.js',
-      'Express',
-      'PostgreSQL/MySQL',
-      'Tailwind CSS',
+      'Express.js',
+      'Flask',
+      'REST APIs',
+      'JWT Authentication',
+      'Microservices',
     ],
   },
   {
-    title: 'Tools',
-    icon: Wrench,
-    skills: ['Git', 'Google Colab', 'Jupyter', 'Visual Paradigm'],
+    title: 'Frontend',
+    icon: Globe,
+    skills: ['React', 'Tailwind CSS', 'HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    title: 'Databases',
+    icon: Database,
+    skills: ['MySQL', 'SQLite', 'MongoDB'],
+  },
+  {
+    title: 'Competitive CP',
+    icon: Terminal,
+    skills: ['2,800+ problems solved', 'ICPC', 'Algorithms', 'Data Structures'],
   },
 ];
 
 const techStack = [
-  { icon: Cpu, label: 'AI/ML' },
+  { icon: Brain, label: 'AI/ML' },
   { icon: Terminal, label: 'Python' },
+  { icon: Code2, label: 'C++' },
   { icon: Globe, label: 'Web' },
   { icon: Database, label: 'DB' },
-  { icon: GitBranch, label: 'Git' },
 ];
 
 export default function Skills() {
@@ -171,7 +185,7 @@ export default function Skills() {
           {/* Categories Grid */}
           <div
             ref={categoriesRef}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {skillCategories.map((category, index) => (
               <div key={index} className="category-col">

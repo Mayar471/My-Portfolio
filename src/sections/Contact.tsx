@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowRight, Phone, Instagram, Facebook, Github, Trophy, Award } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Contact() {
@@ -130,6 +130,26 @@ export default function Contact() {
               </div>
             </a>
 
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/963962076484"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-item flex items-center gap-4 group"
+            >
+              <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+                <Phone className="w-5 h-5 text-gold" />
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-wider text-navy-light mb-1">
+                  WhatsApp
+                </p>
+                <p className="text-white group-hover:text-gold transition-colors">
+                  +963 962 076 484
+                </p>
+              </div>
+            </a>
+
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/mayar-almalla-249972253/"
@@ -150,6 +170,90 @@ export default function Contact() {
                 </p>
               </div>
             </a>
+          </div>
+
+          {/* Social Media & Professional Links */}
+          <div className="space-y-6">
+            <div>
+              <p className="text-xs uppercase tracking-wider text-navy-light mb-3">Social Media</p>
+              <div className="flex items-center gap-3 flex-wrap">
+                <a
+                  href="https://www.instagram.com/mayaralmalla?stkn=MWFhbXNmaDZwY251Mw=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="Instagram"
+                >
+                  <Instagram className="w-4 h-4 text-gold/60" />
+                </a>
+                <a
+                  href="https://www.facebook.com/share/1MZkFvJpuU/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="Facebook"
+                >
+                  <Facebook className="w-4 h-4 text-gold/60" />
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-wider text-navy-light mb-3">Professional Profiles</p>
+              <div className="flex items-center gap-3 flex-wrap">
+                <a
+                  href="https://github.com/Mayar471"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="GitHub"
+                >
+                  <Github className="w-4 h-4 text-gold/60" />
+                </a>
+                <a
+                  href="https://codeforces.com/profile/Algorithmer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="Codeforces"
+                >
+                  <Trophy className="w-4 h-4 text-gold/60" />
+                </a>
+                <a
+                  href="https://icpc.global/private/person/988026/ICPCID"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="ICPC"
+                >
+                  <Award className="w-4 h-4 text-gold/60" />
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <p className="text-xs uppercase tracking-wider text-navy-light mb-3">University Pages</p>
+              <div className="flex items-center gap-3 flex-wrap">
+                <a
+                  href="https://www.instagram.com/kalamooncpc?igsh=MTRwY242aWlzZWlwNA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="Instagram - Kalamoon CPC"
+                >
+                  <Instagram className="w-4 h-4 text-gold/60" />
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61552513531573&mibextid=ZbWKwL"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-gold/20 hover:border-gold/40 transition-colors"
+                  title="Facebook - Kalamoon CPC"
+                >
+                  <Facebook className="w-4 h-4 text-gold/60" />
+                </a>
+              </div>
+            </div>
           </div> {/* إغلاق قسم Contact Details */}
           
           {/* Buttons Area (Added to match your Ref) */}

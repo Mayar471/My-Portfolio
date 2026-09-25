@@ -7,7 +7,7 @@ import About from './sections/About';
 import Skills from './sections/Skills';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';
-import Certificates from './sections/Certificates';
+import Achievements from './sections/Achievements';
 import Contact from './sections/Contact';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -82,7 +82,7 @@ function App() {
         <Skills />
         <Experience />
         <Projects />
-        <Certificates />
+        <Achievements />
         <Contact />
       </main>
     </div>

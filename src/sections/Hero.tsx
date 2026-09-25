@@ -174,7 +174,7 @@ export default function Hero() {
         {/* Meta */}
         <div ref={metaRef} className="mb-12">
           <p className="text-[clamp(14px,1.5vw,18px)] font-medium uppercase tracking-[0.14em] text-navy-light">
-            AI Engineer • Full-Stack Developer
+            AI Engineer • Software Engineer • Full-Stack Developer • Technical Trainer
           </p>
         </div>
 
